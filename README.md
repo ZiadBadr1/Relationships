@@ -1,0 +1,2 @@
+# Relationships
+Relationships in Laravel 
