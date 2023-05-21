@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Phone;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -13,8 +14,10 @@ class UserController extends Controller
      */
     public function index()
     {
-        $phone = User::findorFail(2)->phone ;
-        return $phone;
+//        $phone = User::findorFail(2)->phone ;
+//        return $phone;
+        $roles = User::findorFail(1)->roles;
+        return $roles;
     }
 
     /**
@@ -38,8 +41,11 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        $user = Phone::findorFail(2)->user;
-        return $user->name;
+//        $user = Phone::findorFail(2)->user;
+//        return $user->name;
+
+        $users = Role::findorFail(2)->users;
+        return $users;
     }
 
     /**
